@@ -39,7 +39,7 @@
 
 (defn update-files
   [base-path ext modified]
-  (apply touch (map #(get-clj-file (str base-path %) ext) modified)))
+  (apply touch (map #(get-clj-file (str base-path "/" %) ext) modified)))
 
 (defn touchme
   "Touch clj file when resource is updated."
