@@ -49,7 +49,7 @@
           path-to-observe (:path-to-observe conf)
           extension-to-observe (:extension-to-observe conf)
           update (if (:file-to-touch conf)
-                    (partial update-file (str (first (:source-paths project)) "/" (:file-to-touch conf)))
+                    (partial update-file (str (first (:source-paths project)) "/" (:file-to-touch conf)) nil)
                     (partial update-files (str (first (:source-paths project)) "/" (:path-of-files-to-touch conf)) extension-to-observe))]
       (loop [current-state (get-files-state path-to-observe extension-to-observe)
              changes current-state]
