@@ -10,7 +10,7 @@ Put `[touchme "0.1.0"]` into the `:plugins` vector of your `project.clj`.
 
 ## Configuration
 
-Add a `:touchme' map into the `project.clj`:
+Add a `:touchme` map into the `project.clj`:
 
 - `:path-to-observe` -> relative to project path of files to observe
 - `:extension-to-observe` -> extension of files to observe
