@@ -10,7 +10,7 @@ Put `[touchme "0.1.0"]` into the `:plugins` vector of your `project.clj`.
 
 ## Configuration
 
-Add a `:touchme` map into the `project.clj`:
+Add a `:touchme-config` map into the `project.clj`:
 
 - `:path-to-observe` -> relative to project path of files to observe
 - `:extension-to-observe` -> extension of files to observe
@@ -28,9 +28,9 @@ first `source-paths`. File to touch will be
 (defproject touchme-single-example "0.0.1"
   ;description, url, ...
   :plugins [[touchme "0.1.0"]]
-  :touchme {:path-to-observe "resources/templates"
-            :extension-to-observe ".html"
-            :file-to-touch "my-project/templates/template.clj"})
+  :touchme-config {:path-to-observe "resources/templates"
+                   :extension-to-observe ".html"
+                   :file-to-touch "my-project/templates/template.clj"})
 ```
 
 When `./resources/templates/**/*.html` is modified, the file
@@ -42,9 +42,9 @@ When `./resources/templates/**/*.html` is modified, the file
 (defproject touchme-single-example "0.0.1"
   ;description, url, ...
   :plugins [[touchme "0.1.0"]]
-  :touchme {:path-to-observe "resources/templates"
-            :extension-to-observe ".html"
-            :path-of-files-to-touch "my-project/templates/"})
+  :touchme-config {:path-to-observe "resources/templates"
+                   :extension-to-observe ".html"
+                   :path-of-files-to-touch "my-project/templates/"})
 ```
 
 When `./resources/templates/**/*.html` is modified, the file
